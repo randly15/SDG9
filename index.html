@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Faith for All</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="wordmark btn-link nav-brand" onclick="go('home')">
+      <img src="images/cics-logo.jpg" alt="College of Information and Computing Sciences logo">
+      Digital Faith <span class="dot">·</span> for All
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.links').classList.toggle('open')"><span></span></button>
+    <nav class="links">
+      <button class="navlink" data-page="home" onclick="go('home')">Home</button>
+      <button class="navlink" data-page="bible" onclick="go('bible')">Digital Bible</button>
+      <button class="navlink" data-page="devotionals" onclick="go('devotionals')">Devotionals</button>
+      <button class="navlink" data-page="catechism" onclick="go('catechism')">Catechism</button>
+      <button class="navlink" data-page="prayer" onclick="go('prayer')">Prayer Materials</button>
+      <button class="navlink" data-page="about" onclick="go('about')">Our Mission</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<div class="page active" id="page-home">
+  <section class="hero" style="padding:0;">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">An initiative for the whole Church</p>
+        <h1>Faith should never depend on your Wi-Fi.</h1>
+        <div class="hero-rule"></div>
+        <p class="lede">We build the Bible, devotionals, catechism, and prayer materials for phones with cracked screens, patchy signal, and everyone who's ever prayed in a language their app didn't support.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" onclick="go('bible')">Open the Bible</a>
+          <a class="btn btn-outline" onclick="go('about')">Read our mission</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <span class="stat">38</span>
+        <span class="stat-label">languages, including audio for non-readers</span>
+        <hr class="divider">
+        <span class="stat">Offline-first</span>
+        <span class="stat-label">every text and prayer downloads once, works forever</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="drop-cap" style="max-width:64ch; font-size:1.15rem; color:var(--ink-soft);">
+        For most of the people we build for, a smartphone is shared between five family members, data costs a day's wage, and the nearest catechist is two bus rides away. Digital Faith for All exists to close that distance — turning the Church's oldest texts and practices into something that opens in under two seconds on a 3G connection.
+      </p>
+    </div>
+  </section>
+
+  <section class="alt" style="padding:0;">
+    <div class="wrap" style="padding-top:64px;">
+      <div class="section-head">
+        <p class="kicker">Where to begin</p>
+        <h2>Four ways in</h2>
+      </div>
+    </div>
+    <div class="pillars">
+      <button class="pillar" onclick="go('bible')">
+        <span class="num">I</span>
+        <h3>Digital Bible</h3>
+        <p>Full text in 38 languages, word-search, reading plans, and a read-aloud voice for those who can't read.</p>
+        <span class="enter">Open the Bible</span>
+      </button>
+      <button class="pillar" onclick="go('devotionals')">
+        <span class="num">II</span>
+        <h3>Devotionals</h3>
+        <p>A short daily reading and reflection, written for five spare minutes — on a commute, in a queue, before sleep.</p>
+        <span class="enter">Read today's devotional</span>
+      </button>
+      <button class="pillar" onclick="go('catechism')">
+        <span class="num">III</span>
+        <h3>Catechism</h3>
+        <p>The Church's teaching, broken into short lessons a catechist can send one at a time over SMS.</p>
+        <span class="enter">Browse the lessons</span>
+      </button>
+      <button class="pillar" onclick="go('prayer')">
+        <span class="num">IV</span>
+        <h3>Prayer materials</h3>
+        <p>Rosaries, novenas, and printable prayer cards for parishes with no printer budget of their own.</p>
+        <span class="enter">Find a prayer</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="mission">
+    <div class="wrap">
+      <div>
+        <h2>Built for the edges of the signal map, not the center of it.</h2>
+        <p>Every product decision starts with the person on the worst connection, not the best one. If it works for them, it works for everyone.</p>
+      </div>
+      <div>
+        <div class="access-strip">
+          <span class="access-chip">Works offline</span>
+          <span class="access-chip">Audio for non-readers</span>
+          <span class="access-chip">SMS &amp; USSD versions</span>
+          <span class="access-chip">Screen-reader friendly</span>
+          <span class="access-chip">Under 2MB per download</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= DIGITAL BIBLE ================= -->
+<div class="page" id="page-bible">
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Scripture, wherever you are</p>
+        <h2>The Digital Bible</h2>
+        <p>One text, built three ways: to read, to hear, and to search — so it works whether you have a screen full of light or none at all.</p>
+      </div>
+
+      <div class="feature">
+        <div class="panel">
+          <p class="label">Reading plan</p>
+          <h4>The Gospel in 21 Days</h4>
+          <p style="color:var(--ink-soft);">A short passage each morning, moving from Advent through Easter. Falls behind gracefully — miss a day and it waits for you.</p>
+          <div class="row-list" style="margin-top:20px;">
+            <div class="row" style="grid-template-columns:40px 1fr;">
+              <span class="idx">1</span>
+              <div><h4 style="font-size:1.05rem;">Luke 1 — The Announcement</h4><p>8 min read · audio available</p></div>
+            </div>
+            <div class="row" style="grid-template-columns:40px 1fr;">
+              <span class="idx">2</span>
+              <div><h4 style="font-size:1.05rem;">Luke 2 — The Nativity</h4><p>7 min read · audio available</p></div>
+            </div>
+            <div class="row" style="grid-template-columns:40px 1fr; border-bottom:none;">
+              <span class="idx">3</span>
+              <div><h4 style="font-size:1.05rem;">Matthew 5 — The Beatitudes</h4><p>6 min read · audio available</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="label">Search the text</p>
+          <h4>Find a verse without knowing its address</h4>
+          <p style="color:var(--ink-soft); margin-bottom:20px;">Search by feeling, not just reference — "afraid," "forgive my brother," "lost sheep" all find their passage.</p>
+          <div style="border:1px solid var(--rule); padding:14px 16px; display:flex; gap:10px; align-items:center; background:var(--paper-2);">
+            <span style="color:var(--ink-soft);">🔍</span>
+            <span style="color:var(--ink-soft);">"i am afraid of what comes next"</span>
+          </div>
+          <p style="margin-top:16px; color:var(--ink-soft); font-size:0.95rem;">→ Matches Isaiah 41:10, Philippians 4:6–7, Psalm 23</p>
+          <p style="margin-top:24px; color:var(--ink-soft); font-size:0.95rem;">Every result opens the full chapter around it, never just an isolated line — context stays intact.</p>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:72px;">
+        <p class="kicker">Made to fit the device you actually own</p>
+        <h2>Access, three ways</h2>
+      </div>
+      <div class="row-list">
+        <div class="row">
+          <span class="idx">A</span>
+          <div><h4>Full app</h4><p>Smartphone experience with bookmarks, notes, and highlighting. Downloads the whole Bible once — 11MB — then never needs data again.</p></div>
+          <span class="tag">Android · iOS</span>
+        </div>
+        <div class="row">
+          <span class="idx">B</span>
+          <div><h4>Audio Bible</h4><p>Every book narrated in the reader's own language, for the roughly 750 million adults worldwide who can't read fluently.</p></div>
+          <span class="tag">MP3 · Offline</span>
+        </div>
+        <div class="row">
+          <span class="idx">C</span>
+          <div><h4>SMS &amp; USSD verse-of-the-day</h4><p>For basic phones with no internet at all — dial a short code, receive one verse, no smartphone required.</p></div>
+          <span class="tag">Feature phones</span>
+        </div>
+      </div>
+      <div class="access-strip">
+        <span class="access-chip">English</span><span class="access-chip">Spanish</span><span class="access-chip">Tagalog</span>
+        <span class="access-chip">Swahili</span><span class="access-chip">Hindi</span><span class="access-chip">Igbo</span>
+        <span class="access-chip">+ 32 more</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= DEVOTIONALS ================= -->
+<div class="page" id="page-devotionals">
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Five minutes, once a day</p>
+        <h2>Devotionals</h2>
+        <p>Short reflections meant to be read in a queue, a commute, or the quiet minute before sleep — never long enough to feel like homework.</p>
+      </div>
+
+      <div class="feature">
+        <div class="devo-card">
+          <p class="date">Today · September 5</p>
+          <h4>What the waiting is for</h4>
+          <blockquote>"Be still, and know that I am God." — Psalm 46:10</blockquote>
+          <p>Most of what we call waiting is actually just unfinished trust. The line at the clinic, the reply that hasn't come, the year that hasn't turned out how you'd planned — none of it is empty time. It's the shape prayer takes when you can't yet see the answer.</p>
+          <p style="color:var(--gold-soft); font-size:0.9rem; margin-top:20px;">2 min read · also available as audio</p>
+        </div>
+        <div>
+          <p class="label" style="color:var(--gold); font-weight:600; font-size:0.9rem;">This week's themes</p>
+          <div class="row-list">
+            <div class="row" style="grid-template-columns:40px 1fr;">
+              <span class="idx">Mon</span>
+              <div><h4 style="font-size:1.05rem;">What the waiting is for</h4><p>On patience and unseen answers</p></div>
+            </div>
+            <div class="row" style="grid-template-columns:40px 1fr;">
+              <span class="idx">Tue</span>
+              <div><h4 style="font-size:1.05rem;">The neighbor you didn't choose</h4><p>On love that isn't optional</p></div>
+            </div>
+            <div class="row" style="grid-template-columns:40px 1fr; border-bottom:none;">
+              <span class="idx">Wed</span>
+              <div><h4 style="font-size:1.05rem;">Small enough to carry</h4><p>On daily bread over five-year plans</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:72px;">
+        <p class="kicker">Written for real weeks, not perfect ones</p>
+        <h2>Browse by season</h2>
+      </div>
+      <div class="row-list">
+        <div class="row"><span class="idx">Ω</span><div><h4>Ordinary Time</h4><p>The steady weeks between seasons — on showing up when nothing's marked as sacred.</p></div><span class="tag">210 entries</span></div>
+        <div class="row"><span class="idx">Adv</span><div><h4>Advent</h4><p>Twenty-four short readings for the wait before Christmas.</p></div><span class="tag">24 entries</span></div>
+        <div class="row"><span class="idx">Lent</span><div><h4>Lent</h4><p>Forty days built around fasting, almsgiving, and a return to prayer.</p></div><span class="tag">40 entries</span></div>
+        <div class="row"><span class="idx">Grief</span><div><h4>For those grieving</h4><p>Written with hospice chaplains, for the days grief doesn't follow a calendar.</p></div><span class="tag">18 entries</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CATECHISM ================= -->
+<div class="page" id="page-catechism">
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The teaching, in order</p>
+        <h2>Catechism</h2>
+        <p>The Church's teaching broken into lessons short enough for a catechist to send one at a time — over an app, a printed booklet, or a single text message.</p>
+      </div>
+
+      <div class="row-list">
+        <div class="row">
+          <span class="idx">1</span>
+          <div><h4>The Creed</h4><p>What Christians believe, and why each line of the Creed was fought for.</p></div>
+          <span class="tag">12 lessons</span>
+        </div>
+        <div class="row">
+          <span class="idx">2</span>
+          <div><h4>The Sacraments</h4><p>Seven signs, from baptism to anointing — what each one does, not just what it means.</p></div>
+          <span class="tag">14 lessons</span>
+        </div>
+        <div class="row">
+          <span class="idx">3</span>
+          <div><h4>Prayer</h4><p>How to pray when you don't know how — starting from the Our Father, line by line.</p></div>
+          <span class="tag">9 lessons</span>
+        </div>
+        <div class="row">
+          <span class="idx">4</span>
+          <div><h4>Christian Life</h4><p>The commandments and the beatitudes, read as a way to live rather than a list of rules.</p></div>
+          <span class="tag">16 lessons</span>
+        </div>
+      </div>
+
+      <div class="feature" style="margin-top:64px;">
+        <div class="panel">
+          <p class="label">For catechists</p>
+          <h4>Send one lesson a week, automatically</h4>
+          <p style="color:var(--ink-soft);">Enroll a class once. Each student receives that week's lesson on their own phone, in their own language, with a short quiz to check what stuck — no printing, no photocopier, no missed weeks when the catechist is out sick.</p>
+        </div>
+        <div class="panel">
+          <p class="label">For RCIA &amp; adult converts</p>
+          <h4>A full year, paced for you</h4>
+          <p style="color:var(--ink-soft);">The same 51 lessons the Church has always taught inquirers, paced week by week from first inquiry to Easter Vigil, with space to mark questions for your sponsor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PRAYER MATERIALS ================= -->
+<div class="page" id="page-prayer">
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">To pray alone, or to print for a parish</p>
+        <h2>Prayer materials</h2>
+        <p>Everything downloads as plain text and as a print-ready card, because a parish with no printer budget deserves the same materials as one with a full print shop.</p>
+      </div>
+    </div>
+    <div class="prayer-grid">
+      <div class="prayer-item">
+        <h4>Morning &amp; Evening Prayer</h4>
+        <p>A short office to open and close the day, in the rhythm of the Liturgy of the Hours.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+      <div class="prayer-item">
+        <h4>The Rosary</h4>
+        <p>All four sets of mysteries, with a plain-language guide for first-timers who never learned the beads.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+      <div class="prayer-item">
+        <h4>Novenas</h4>
+        <p>Nine-day prayers for specific needs — healing, employment, a difficult decision, a loved one who's left the faith.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+      <div class="prayer-item">
+        <h4>Prayers for the sick</h4>
+        <p>Short prayers to say at a bedside, written to be read aloud by anyone, not only a priest or chaplain.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+      <div class="prayer-item">
+        <h4>Grace before meals</h4>
+        <p>Short table blessings in eight languages, for households where not everyone prays the same one.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+      <div class="prayer-item">
+        <h4>Prayers with children</h4>
+        <p>Simple, repeatable prayers a parent can teach a child before they can read, with a version to say together.</p>
+        <span class="dl">Download prayer card</span>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:48px;">
+      <p style="color:var(--ink-soft);">Every card is formatted to print two-to-a-page on a home printer, so a parish office can produce fifty copies from a single sheet of paper.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT / MISSION ================= -->
+<div class="page" id="page-about">
+  <section style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Why we build this</p>
+        <h2>Our mission</h2>
+      </div>
+      <p class="drop-cap" style="max-width:66ch; font-size:1.1rem; color:var(--ink-soft);">
+        Faith formation has always assumed a few things: a Bible on the shelf, a catechist nearby, a parish that can afford to print. For a large share of the world's Catholics — rural, low-income, sharing one phone between a household — none of that holds. Digital Faith for All starts from the opposite assumption: build for the person with the least, and the rest of the Church can use it too.
+      </p>
+
+      <div class="about-stats">
+        <div><span class="n">38</span><span class="l">languages supported, including audio-only versions</span></div>
+        <div><span class="n">1.1M</span><span class="l">devotional readings sent last year</span></div>
+        <div><span class="n">&lt;2MB</span><span class="l">typical download size per resource</span></div>
+      </div>
+
+      <div class="feature" style="margin-top:72px;">
+        <div>
+          <h4 style="font-family:var(--serif); font-size:1.4rem; color:var(--navy); font-weight:500;">How we decide what to build</h4>
+          <p style="color:var(--ink-soft);">Every resource is reviewed for doctrinal accuracy by parish clergy before release, then tested with the people it's actually for — a catechist in a two-room parish, a grandmother on a shared family phone, a teenager who prays mostly by audio during a commute.</p>
+        </div>
+        <div>
+          <h4 style="font-family:var(--serif); font-size:1.4rem; color:var(--navy); font-weight:500;">Get involved</h4>
+          <p style="color:var(--ink-soft);">We're always looking for translators, catechists willing to pilot new lessons, and parishes who can tell us what's missing. If that's you, reach out — the next language we add might be the one you speak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="fbrand">
+        <img src="images/cics-logo.jpg" alt="College of Information and Computing Sciences logo">
+        <div class="fbrand-text">
+          <h5>College of Information and Computing Sciences</h5>
+          <p>SJCBI · Digital Faith for All is a student capstone initiative of this college.</p>
+        </div>
+      </div>
+      <div class="fcols">
+        <div class="fcol">
+          <h5>Resources</h5>
+          <a onclick="go('bible')">Digital Bible</a>
+          <a onclick="go('devotionals')">Devotionals</a>
+          <a onclick="go('catechism')">Catechism</a>
+          <a onclick="go('prayer')">Prayer Materials</a>
+        </div>
+        <div class="fcol">
+          <h5>About</h5>
+          <a onclick="go('about')">Our Mission</a>
+        </div>
+      </div>
+    </div>
+    <div class="sdg-strip">
+      <div class="sdg-badge"><span class="num">9</span><span class="label">Industry, Innovation &amp; Infrastructure</span></div>
+      <div class="sdg-text">
+        <h5>Supporting UN Sustainable Development Goal 9</h5>
+        <p>By building resilient, low-bandwidth infrastructure for faith formation, this project extends inclusive access to digital resources for underserved communities — in line with SDG 9's call for innovation and infrastructure for all.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap legal">This is a prototype design — content shown is illustrative, not a live service.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
